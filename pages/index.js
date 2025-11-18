@@ -119,7 +119,7 @@ const styles = {
 
   /* 右側 */
   rightArea: {
-    maxWidth: "360px",
+    maxWidth: "380px",
     marginTop: "80px",     // ← 右列を少し下へ（ウサギの足の位置）
   },
 
@@ -159,6 +159,7 @@ box: {
     textDecoration: "underline",
   },
 };
+
 
 
 
