@@ -24,6 +24,14 @@ export default function Home() {
         <Link href="/privacy" style={styles.link}>プライバシーポリシー</Link>
         <Link href="/tokushoho" style={styles.link}>特商法</Link>
         <Link href="/contact" style={styles.link}>お問い合わせ</Link>
+      <a
+    href="https://x.com/usagidechukai"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={styles.link}
+  >
+    X
+  </a>
       </div>
     </div>
   );
@@ -81,4 +89,5 @@ const styles = {
     fontSize: "16px"
   }
 };
+
 
