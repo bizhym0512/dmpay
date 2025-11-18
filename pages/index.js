@@ -26,14 +26,6 @@ export default function Home() {
         <button style={styles.downloadBtn}>Android版（準備中）</button>
       </div>
 
-      {/* 使い方 */}
-      <div style={styles.steps}>
-        <h3 style={styles.stepsTitle}>使い方はかんたん3ステップ</h3>
-        <p style={styles.step}>1. クリエイターが金額を入力してURLを生成</p>
-        <p style={styles.step}>2. 購入者がURLから支払い</p>
-        <p style={styles.step}>3. 納品後に「受け取り確認」を押すだけ</p>
-      </div>
-
       {/* フッターリンク */}
       <div style={styles.links}>
         <Link href="/terms" style={styles.link}>利用規約</Link>
@@ -95,26 +87,6 @@ const styles = {
     background: "#fafafa",
     cursor: "default"
   },
-   steps: {
-    marginTop: 20,
-    marginBottom: 20,   // ← 間隔を狭めました
-    maxWidth: "320px",  // ← 左寄せでも綺麗に見せるため追加
-    textAlign: "left",  // ← 左寄せ
-    marginLeft: "auto",
-    marginRight: "auto"
-  },
-  stepsTitle: {
-    fontSize: "20px",
-    marginBottom: 12,
-    fontWeight: "bold",
-    textAlign: "center"  // ← タイトルは中央のまま
-  },
-  step: {
-    fontSize: "15px",
-    marginBottom: 6,
-    color: "#444",
-    lineHeight: 1.5
-  },
   links: {
     marginTop: "auto",
     marginBottom: 20,
@@ -128,4 +100,3 @@ const styles = {
     textDecoration: "underline"
   }
 };
-
