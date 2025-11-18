@@ -38,10 +38,10 @@ export default function Home() {
           </div>
 
           <div style={styles.box}>
-            <h3 style={styles.boxTitle}>使い方</h3>
+            <h3 style={styles.boxTitle}>操作はかんたん！</h3>
             <p style={styles.boxText}>1. 金額を書いてURL作成</p>
             <p style={styles.boxText}>2. SNSのDMで納品</p>
-            <p style={styles.boxText}>3. 完了！</p>
+            <p style={styles.boxText}>3. お金をうけとる</p>
           </div>
 
         </div>
@@ -119,12 +119,12 @@ const styles = {
 
   /* 右側 */
   rightArea: {
-    maxWidth: "300px",
+    maxWidth: "380px",
     marginTop: "80px",     // ← 右列を少し下へ（ウサギの足の位置）
   },
 
   box: {
-    padding: "20px",
+    padding: "100%",
     border: "1px solid #eee",
     borderRadius: "12px",
     background: "#fafafa",
@@ -158,4 +158,5 @@ const styles = {
     textDecoration: "underline",
   },
 };
+
 
