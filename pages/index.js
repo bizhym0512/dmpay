@@ -24,7 +24,7 @@ export default function Home() {
             rel="noopener noreferrer"
             style={styles.xLink}
           >
-            公式X（最新情報）
+            公式Xはこちら
           </a>
         </div>
 
@@ -34,14 +34,13 @@ export default function Home() {
           <div style={styles.box}>
             <h3 style={styles.boxTitle}>このアプリの特徴</h3>
             <p style={styles.boxText}>・手数料は4%（業界最安値）</p>
-            <p style={styles.boxText}>・未払い／納品トラブルを防ぐ</p>
-            <p style={styles.boxText}>・匿名でかんたんに取引</p>
+            <p style={styles.boxText}>・SNS取引の“お金まわり”だけ安心に</p>
           </div>
 
           <div style={styles.box}>
             <h3 style={styles.boxTitle}>使い方</h3>
-            <p style={styles.boxText}>1. 金額とタイトルを書いてURLを作成</p>
-            <p style={styles.boxText}>2. 納品</p>
+            <p style={styles.boxText}>1. 金額を書いてURL作成</p>
+            <p style={styles.boxText}>2. SNSのDMで納品</p>
             <p style={styles.boxText}>3. 完了！</p>
           </div>
 
@@ -62,9 +61,9 @@ export default function Home() {
 
 const styles = {
   container: {
-    minHeight: "100vh",
+    minHeight: "auto",
     paddingTop: "120px",   // ← 全体をさらに下へ
-    paddingBottom: "40px",
+    paddingBottom: "10px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -159,3 +158,4 @@ const styles = {
     textDecoration: "underline",
   },
 };
+
