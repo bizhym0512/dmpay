@@ -12,10 +12,6 @@ export default function Contact() {
           usagi.chukai@gmail.com
         </a>
       </p>
-
-      <p style={{ marginTop: "40px", color: "#777" }}>
-        ※ 通常 24 時間以内に返信いたします。
-      </p>
     </div>
   );
 }
@@ -29,3 +25,4 @@ const styles = {
     fontFamily: "sans-serif",
   },
 };
+
