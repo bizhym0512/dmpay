@@ -6,7 +6,7 @@ export default function Home() {
 
       <div style={styles.mainArea}>
 
-        {/* 左側エリア */}
+        {/* 左側：ロゴ・タイトル・ボタン・X */}
         <div style={styles.leftArea}>
           <img src="/usagi-logo.png" alt="usagi logo" style={styles.logo} />
 
@@ -17,6 +17,7 @@ export default function Home() {
             <button style={styles.downloadBtn}>Android版（準備中）</button>
           </div>
 
+          {/* ← iOSとAndroidのちょうど真ん中に来る位置 */}
           <a
             href="https://x.com/usagidechukai"
             target="_blank"
@@ -27,7 +28,7 @@ export default function Home() {
           </a>
         </div>
 
-        {/* 右側エリア */}
+        {/* 右側：特徴・使い方 */}
         <div style={styles.rightArea}>
 
           <div style={styles.box}>
@@ -45,7 +46,6 @@ export default function Home() {
           </div>
 
         </div>
-
       </div>
 
       {/* フッター */}
@@ -63,7 +63,7 @@ export default function Home() {
 const styles = {
   container: {
     minHeight: "100vh",
-    paddingTop: "60px",
+    paddingTop: "120px",   // ← 全体をさらに下へ
     paddingBottom: "40px",
     display: "flex",
     flexDirection: "column",
@@ -72,36 +72,38 @@ const styles = {
 
   mainArea: {
     display: "flex",
-    gap: "30px",               // ← 左右の距離を詰める
-    alignItems: "flex-start",  // 上端揃え
+    gap: "50px",           // ← 2段組の間隔を広げた
+    alignItems: "flex-start",
     flexWrap: "wrap",
+    justifyContent: "center",
   },
 
   /* 左側 */
   leftArea: {
-    textAlign: "left",
+    textAlign: "center",
     maxWidth: "260px",
   },
 
   logo: {
-    width: 150,                // ← 少し大きく
-    marginBottom: 10,
+    width: 160,            // ← 少し大きめに
+    marginBottom: 15,
   },
 
   title: {
-    fontSize: "34px",          // ← 大きく
+    fontSize: "36px",
     fontWeight: "bold",
-    marginBottom: 15,
+    marginBottom: 20,
   },
 
   downloadArea: {
     display: "flex",
     gap: "10px",
-    marginBottom: 8,
+    justifyContent: "center",
+    marginBottom: 5,
   },
 
   downloadBtn: {
-    padding: "10px 18px",
+    padding: "10px 20px",
     borderRadius: "10px",
     border: "1px solid #ccc",
     background: "#fafafa",
@@ -112,49 +114,48 @@ const styles = {
     marginTop: 8,
     display: "inline-block",
     color: "#1d9bf0",
-    fontSize: "15px",
+    fontSize: "16px",
     textDecoration: "underline",
   },
 
   /* 右側 */
   rightArea: {
     maxWidth: "300px",
-    marginTop: "65px",         // ← ウサギの足あたりに揃える
+    marginTop: "80px",     // ← 右列を少し下へ（ウサギの足の位置）
   },
 
   box: {
-    padding: "18px 20px",
+    padding: "20px",
     border: "1px solid #eee",
     borderRadius: "12px",
     background: "#fafafa",
-    marginBottom: 20,
+    marginBottom: 25,
   },
 
   boxTitle: {
     margin: 0,
-    fontSize: "20px",          // ← もっと大きく
+    fontSize: "20px",
     fontWeight: "bold",
     marginBottom: 12,
   },
 
   boxText: {
     margin: "6px 0",
-    fontSize: "16px",          // ← 大きく読みやすく
+    fontSize: "17px",      // ← 文字をさらに大きく
     lineHeight: 1.5,
   },
 
-  /* フッターリンク */
   links: {
-    textAlign: "center",
     marginTop: "30px",
+    textAlign: "center",
     display: "flex",
     flexDirection: "column",
     gap: "4px",
   },
 
   link: {
-    color: "#555",
     fontSize: "13px",
+    color: "#555",
     textDecoration: "underline",
   },
 };
