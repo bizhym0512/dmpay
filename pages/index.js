@@ -4,49 +4,51 @@ export default function Home() {
   return (
     <div style={styles.container}>
 
-      <div style={styles.centerArea}>
+      <div style={styles.mainArea}>
 
-        {/* ロゴ */}
-        <img src="/usagi-logo.png" alt="usagi logo" style={styles.logo} />
+        {/* 左側エリア */}
+        <div style={styles.leftArea}>
+          <img src="/usagi-logo.png" alt="usagi logo" style={styles.logo} />
 
-        {/* タイトル */}
-        <h1 style={styles.title}>うさぎで仲介</h1>
+          <h1 style={styles.title}>うさぎで仲介</h1>
 
-        {/* ダウンロードボタン */}
-        <div style={styles.downloadArea}>
-          <button style={styles.downloadBtn}>iOS版（準備中）</button>
-          <button style={styles.downloadBtn}>Android版（準備中）</button>
+          <div style={styles.downloadArea}>
+            <button style={styles.downloadBtn}>iOS版（準備中）</button>
+            <button style={styles.downloadBtn}>Android版（準備中）</button>
+          </div>
+
+          <a
+            href="https://x.com/usagidechukai"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.xLink}
+          >
+            公式X（最新情報）
+          </a>
         </div>
 
-        {/* Xリンクを中央に */}
-        <a
-          href="https://x.com/usagidechukai"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={styles.xLink}
-        >
-          公式X（最新情報）
-        </a>
+        {/* 右側エリア */}
+        <div style={styles.rightArea}>
 
-        {/* 特徴 */}
-        <div style={styles.box}>
-          <h3 style={styles.boxTitle}>このアプリの特徴</h3>
-          <p style={styles.boxText}>・手数料は4%（業界最安値）</p>
-          <p style={styles.boxText}>・未払い／納品トラブルを防ぐ</p>
-          <p style={styles.boxText}>・匿名でかんたんに取引</p>
-        </div>
+          <div style={styles.box}>
+            <h3 style={styles.boxTitle}>このアプリの特徴</h3>
+            <p style={styles.boxText}>・手数料は4%（業界最安値）</p>
+            <p style={styles.boxText}>・未払い／納品トラブルを防ぐ</p>
+            <p style={styles.boxText}>・匿名でかんたんに取引</p>
+          </div>
 
-        {/* 使い方 */}
-        <div style={styles.box}>
-          <h3 style={styles.boxTitle}>使い方</h3>
-          <p style={styles.boxText}>1. 金額とタイトルを書いてURLを作成</p>
-          <p style={styles.boxText}>2. 納品</p>
-          <p style={styles.boxText}>3. 完了！</p>
+          <div style={styles.box}>
+            <h3 style={styles.boxTitle}>使い方</h3>
+            <p style={styles.boxText}>1. 金額とタイトルを書いてURLを作成</p>
+            <p style={styles.boxText}>2. 納品</p>
+            <p style={styles.boxText}>3. 完了！</p>
+          </div>
+
         </div>
 
       </div>
 
-      {/* フッターリンク */}
+      {/* フッター */}
       <div style={styles.links}>
         <Link href="/terms" style={styles.link}>利用規約</Link>
         <Link href="/privacy" style={styles.link}>プライバシーポリシー</Link>
@@ -61,41 +63,45 @@ export default function Home() {
 const styles = {
   container: {
     minHeight: "100vh",
-    paddingTop: "80px",       // ← 全体を下に
+    paddingTop: "60px",
     paddingBottom: "40px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
   },
 
-  centerArea: {
+  mainArea: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    width: "100%",
-    maxWidth: "420px",       // ← 中央寄せの幅
-    gap: "20px",
+    gap: "30px",               // ← 左右の距離を詰める
+    alignItems: "flex-start",  // 上端揃え
+    flexWrap: "wrap",
+  },
+
+  /* 左側 */
+  leftArea: {
+    textAlign: "left",
+    maxWidth: "260px",
   },
 
   logo: {
-    width: 160,              // ← 大きく
-    marginBottom: 5,
+    width: 150,                // ← 少し大きく
+    marginBottom: 10,
   },
 
   title: {
-    fontSize: "36px",        // ← 大きく
+    fontSize: "34px",          // ← 大きく
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 15,
   },
 
   downloadArea: {
     display: "flex",
-    gap: "12px",
-    marginBottom: 4,
+    gap: "10px",
+    marginBottom: 8,
   },
 
   downloadBtn: {
-    padding: "10px 20px",
+    padding: "10px 18px",
     borderRadius: "10px",
     border: "1px solid #ccc",
     background: "#fafafa",
@@ -103,42 +109,52 @@ const styles = {
   },
 
   xLink: {
-    fontSize: "15px",
+    marginTop: 8,
+    display: "inline-block",
     color: "#1d9bf0",
+    fontSize: "15px",
     textDecoration: "underline",
-    marginBottom: 10,
+  },
+
+  /* 右側 */
+  rightArea: {
+    maxWidth: "300px",
+    marginTop: "65px",         // ← ウサギの足あたりに揃える
   },
 
   box: {
-    width: "100%",
-    padding: "15px 20px",
-    background: "#fafafa",
+    padding: "18px 20px",
     border: "1px solid #eee",
     borderRadius: "12px",
+    background: "#fafafa",
+    marginBottom: 20,
   },
 
   boxTitle: {
-    fontSize: "18px",
+    margin: 0,
+    fontSize: "20px",          // ← もっと大きく
     fontWeight: "bold",
-    margin: "0 0 10px 0",
+    marginBottom: 12,
   },
 
   boxText: {
-    margin: "4px 0",
-    fontSize: "15px",
+    margin: "6px 0",
+    fontSize: "16px",          // ← 大きく読みやすく
+    lineHeight: 1.5,
   },
 
+  /* フッターリンク */
   links: {
     textAlign: "center",
-    marginTop: "40px",
+    marginTop: "30px",
     display: "flex",
     flexDirection: "column",
     gap: "4px",
   },
 
   link: {
-    fontSize: "13px",
     color: "#555",
+    fontSize: "13px",
     textDecoration: "underline",
   },
 };
