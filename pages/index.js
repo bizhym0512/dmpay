@@ -101,7 +101,6 @@ export default function HomePage() {
                   color: colors.grayText,
                 }}
               >
-                SNSに、シンプルな決済を
               </div>
             </div>
           </Link>
@@ -185,7 +184,7 @@ export default function HomePage() {
                 color: colors.navy,
               }}
             >
-              安心できる、SNS取引のために
+             
             </h1>
 
             <p
@@ -197,7 +196,7 @@ export default function HomePage() {
                 color: colors.grayText,
               }}
             >
-              dmpayは、SNSのDMで安全なデジタル取引を成立させるサービスです。
+              dmpayは、SNSの安全なデジタル取引を成立させるサービスです。
             </p>
 
             {/* 2つの選択ボタン */}
@@ -247,7 +246,7 @@ export default function HomePage() {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  手数料0% / 安心の仕組み
+                  安心の仕組み
                 </div>
               </Link>
 
@@ -373,3 +372,4 @@ export default function HomePage() {
     </div>
   );
 }
+
